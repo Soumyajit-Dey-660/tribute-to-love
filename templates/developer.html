@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                background: gray;
+            }
+            nav{
+                background: #594848;
+                width: 100%;
+                overflow: auto;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            li{
+                float: left;
+            }
+            nav a{
+                width: 120px;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                background: #594848;
+                font-size: 17px;
+                color: white;
+                padding: 20px 10px;
+                font-family: Arial;
+            }
+            nav a:hover{
+                background: skyblue;
+                color: black;
+            }
+            .container{
+                max-width: 1200px;
+                margin: auto;
+                background: #f2f2f2;
+                overflow: auto;
+            }
+            .gallery{
+                margin: 5px;
+                border: 1px solid #ccc;
+                float: left;
+                width: 390px;
+
+            }
+            .gallery img{
+                width: 100%;
+                height: auto;
+            }
+            .desc{
+                padding: 15px;
+                text-align: center;
+            }
+            footer{
+                padding: 10px;
+                font-weight: bold;
+                text-align: center;
+                background: #594848;
+                color: white;
+                font-family: Arial;
+                letter-spacing: 1px;
+            }
+            .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 2px;
+            }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+            .fa-instagram {
+                background: #cd486b;
+                color: white;
+            }
+            .fa-pinterest {
+            background: #cb2027;
+            color: white;
+            }
+            .fa-linkedin {
+            background: #007bb5;
+            color: white;
+            }
+            .fa-github {
+            background: black;
+            color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a style="width: 80px;" href="{{ url_for('home') }}">Home</a></li>
+                <li><a style="width: 80px;" href="{{ url_for('story') }}"> Story</a></li>
+                <li><a style="width: 80px;" href="{{ url_for('funny') }}">Funny</a></li>
+                <li><a style="width: 80px;" href="{{ url_for('special') }}">Special</a></li>
+                <li><a style="width: 90px;" href="{{ url_for('developer') }}">Developer</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="gallery">
+                <img src="{{ url_for('static', filename='pics/developer.jpeg') }}">
+                <div class="desc">Soumyajit Dey</div>
+            </div>
+        </div>
+        <div class="container" style="padding: 20px 20px;">
+            <p style="font-size: 18px;">Hello, I am Soumyajit Dey, 22. A software developerby profession and Aishwarya's boyfriend.
+                <br>Hope you had a beautiful time exploring the minuscular website. Thank you. :) </p>
+        </div>
+    </body>
+    <footer>
+        <a href="https://github.com/Soumyajit-Dey-660" class="fa fa-github" style="width: 70px; font-size: 30px;"></a>
+        <a href="https://www.instagram.com/sdey_08/" class="fa fa-instagram" style="width: 70px;"></a>
+        <a href="https://in.pinterest.com/soumyajit660/" class="fa fa-pinterest" style="width: 70px;"></a>
+        <a href="https://www.linkedin.com/in/soumyajit-dey-604702184/" class="fa fa-linkedin" style="width: 70px;"></a>
+    </footer>
+</html>
